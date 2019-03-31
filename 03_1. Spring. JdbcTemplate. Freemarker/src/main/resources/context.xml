@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="textNotebook" class="ru.fix.javacource.springexample.springdemo.NotebookTextFileImpl">
+        <constructor-arg value="textNotebook.txt"/>
+    </bean>
+
+    <bean id="worker" class="ru.fix.javacource.springexample.springdemo.Worker">
+        <constructor-arg ref="textNotebook"/>
+    </bean>
+
+</beans>
